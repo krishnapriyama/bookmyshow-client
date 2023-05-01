@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 // import "./seating.css";
-import FourKIcon from "@mui/icons-material/FourK";
 import { useLocation } from "react-router-dom";
 import axios from "axios";
 import swal from "sweetalert";
