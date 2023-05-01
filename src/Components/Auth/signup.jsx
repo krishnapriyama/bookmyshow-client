@@ -2,20 +2,20 @@ import React, { useEffect } from 'react'
 import { useFormik } from 'formik'
 import { ToastContainer, toast } from 'react-toastify'
 import { useNavigate } from 'react-router-dom'
-import Lottie from 'react-lottie'
+// import Lottie from 'react-lottie'
 import { Link } from 'react-router-dom'
-import animationData from '../../assets/LottieAnimations/signupMovie.json'
+// import animationData from '../../assets/LottieAnimations/signupMovie.json'
 import userAxios from '../../../confic/axiosUser'
 
 function signup() {
   const navigateto = useNavigate()
 
   // animation
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: animationData,
-  }
+  // const defaultOptions = {
+  //   loop: true,
+  //   autoplay: true,
+  //   animationData: animationData,
+  // }
 
   // email error
   const generateError = (error) =>
@@ -94,7 +94,7 @@ function signup() {
       <div className="container mx-auto flex justify-center items-center h-full">
         <div className="md:w-3/4 lg:w-1/2 xl:w-2/5">
           <div>
-            <Lottie options={defaultOptions} />
+            {/* <Lottie options={defaultOptions} /> */}
           </div>
         </div>
 

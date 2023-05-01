@@ -5,18 +5,18 @@ import axios from 'axios'
 import userAxios from '../../../confic/axiosUser'
 
 import { ToastContainer, toast } from 'react-toastify'
-import Lottie from 'react-lottie'
+// import Lottie from 'react-lottie'
 import { Link } from 'react-router-dom'
-import animationData from '../../assets/LottieAnimations/loginMovie.json'
+// import animationData from '../../assets/LottieAnimations/loginMovie.json'
 
 function login() {
   const navigate = useNavigate()
 // animation
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: animationData,
-  }
+  // const defaultOptions = {
+  //   loop: true,
+  //   autoplay: true,
+  //   animationData: animationData,
+  // }
 
 
 
@@ -71,7 +71,7 @@ function login() {
       <div className="container mx-auto flex justify-center items-center h-full">
         <div className="md:w-3/4 lg:w-1/2 xl:w-2/5">
           <div>
-            <Lottie options={defaultOptions} />
+            {/* <Lottie options={defaultOptions} /> */}
           </div>
         </div>
 

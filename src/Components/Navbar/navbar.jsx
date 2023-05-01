@@ -5,8 +5,8 @@ import { BiSearch } from 'react-icons/bi'
 import Modal from 'react-modal'
 import Bookmyshowimg from '../../assets/bookmyshow.png'
 import axios from 'axios'
-import animationData from '../../assets/LottieAnimations/profile.json'
-import Lottie from 'react-lottie'
+// import animationData from '../../assets/LottieAnimations/profile.json'
+// import Lottie from 'react-lottie'
 import userAxios from '../../../confic/axiosUser'
 
 const NavLg = () => {
@@ -17,11 +17,11 @@ const NavLg = () => {
   const [search, setSearch] = useState([])
   const [key, setKey] = useState('')
 
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: animationData,
-  };
+  // const defaultOptions = {
+  //   loop: true,
+  //   autoplay: true,
+  //   animationData: animationData,
+  // };
 
   useEffect(() => {
     const search = async () => {
@@ -93,12 +93,14 @@ const NavLg = () => {
                     Logout
                   </button>
                   <Link to='/profile'>
-                    <div style={{ height: '70px', width: '100px' }}>
+                    {/* <div style={{ height: '70px', width: '100px' }}>
                       <Lottie
                         options={defaultOptions}
                         isClickToPauseDisabled={true}
                       />
-                    </div>
+                    </div> */}
+
+                    <h1>UserLogin</h1>
 
                   </Link>
                 </>
