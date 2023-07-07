@@ -1,6 +1,6 @@
 import axios from "axios";
 const token = localStorage.getItem('userToken')
-const baseURL= "https://www.krishnapriya.online/"
+const baseURL= "https://www.krishnapriya.online"
 const instance = axios.create({
   baseURL,
   
