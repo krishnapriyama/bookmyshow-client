@@ -100,7 +100,7 @@ const NavLg = () => {
                       />
                     </div> */}
 
-                    <h1>UserLogin</h1>
+                    <button className="px-6 py-3 text-white justify-end bg-red-600 rounded-md">PROFILE</button>
 
                   </Link>
                 </>

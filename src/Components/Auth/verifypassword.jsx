@@ -1,5 +1,6 @@
 import React from "react";
-import firebase from "../../Firebase/firebase";
+import firebase
+ from "../../Firebase/firebase";
 import { useNavigate } from "react-router-dom";
 import swal from "sweetalert2";
 import swal1 from "sweetalert";

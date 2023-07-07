@@ -11,20 +11,18 @@ import { Link } from 'react-router-dom'
 
 function login() {
   const navigate = useNavigate()
-// animation
+  // animation
   // const defaultOptions = {
   //   loop: true,
   //   autoplay: true,
   //   animationData: animationData,
   // }
 
-
-
   //error
   const generateError = (error) =>
-  toast.error(error, {
-    position: 'bottom-right',
-  })
+    toast.error(error, {
+      position: 'bottom-right',
+    })
 
   //formik
   const formik = useFormik({
@@ -43,20 +41,20 @@ function login() {
     },
     onSubmit: async (values) => {
       try {
-        const response = await userAxios.post(
-          '/login',
-          {
-            ...values,
-          }
-          
-        )
-        console.log(response);
+        const response = await userAxios.post('/login', {
+          ...values,
+        })
+        console.log(response)
         if (response.data.created == true) {
-          localStorage.setItem('userToken',response.data.token)
+          localStorage.setItem('userToken', response.data.token)
           navigate('/')
           console.log(response.data.created, 'created')
           console.log('Login Success')
-        } else if (response && response.data && response.data.error == 'Invalid email or password') {
+        } else if (
+          response &&
+          response.data &&
+          response.data.error == 'Invalid email or password'
+        ) {
           generateError(response.data.error, 'invalid error')
           console.log('Invalid email or password')
         }
@@ -70,9 +68,7 @@ function login() {
     <section className="h-screen justify-center items-center">
       <div className="container mx-auto flex justify-center items-center h-full">
         <div className="md:w-3/4 lg:w-1/2 xl:w-2/5">
-          <div>
-            {/* <Lottie options={defaultOptions} /> */}
-          </div>
+          <div>{/* <Lottie options={defaultOptions} /> */}</div>
         </div>
 
         {/* Form */}
@@ -100,36 +96,35 @@ function login() {
 
             <div className="mb-4 mt-6">
               <input
-              {...formik.getFieldProps('email')}
+                {...formik.getFieldProps('email')}
                 type="email"
                 id="email"
                 className="w-full p-3 rounded-lg border text-center border-black focus:outline-none focus:border-primary-500"
                 placeholder="Email Address"
               />
               {formik.touched.email && formik.errors.email ? (
-          <div className="text-red-500">{formik.errors.email}</div>
-        ) : null}
+                <div className="text-red-500">{formik.errors.email}</div>
+              ) : null}
             </div>
 
             <div className="mb-3">
               <input
-              {...formik.getFieldProps('password')}
+                {...formik.getFieldProps('password')}
                 type="password"
                 id="password"
                 className="w-full p-3 rounded-lg border text-center border-black focus:outline-none focus:border-primary-500"
                 placeholder="Password"
               />
               {formik.touched.password && formik.errors.password ? (
-          <div className="text-red-500">{formik.errors.password}</div>
-        ) : null}
+                <div className="text-red-500">{formik.errors.password}</div>
+              ) : null}
             </div>
             <Link
-              to='/forgotpassword'
+              to="/forgotpassword"
               className="text-red-600 text-sm font-bold mt-4 items-center w-full"
             >
               Before Login Verify Your account
             </Link>
-
 
             <div className="mb-3 mt-4">
               <button
@@ -140,10 +135,8 @@ function login() {
               </button>
               <p className="text-sm font-bold mt-2 justify-center">
                 Don't have an account?{' '}
-                <Link to='/signup'>
-                <button  className="text-red-500">
-                  Register
-                </button>
+                <Link to="/signup">
+                  <button className="text-red-500">Register</button>
                 </Link>
               </p>
             </div>
